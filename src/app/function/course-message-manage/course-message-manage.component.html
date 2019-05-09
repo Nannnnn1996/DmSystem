@@ -1,0 +1,42 @@
+<div>
+  <nz-row>
+      <nz-col nzSpan="8">
+              <button nz-button nzType = "primary">
+                <i class="fa fa-plus"></i>     
+                 <span>&nbsp;&nbsp;创建</span>
+               </button>
+      </nz-col>
+      <nz-col nzSpan="8" nzOffset="8">
+          <div style="width:60%;margin-left: 40%">
+                  <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+                          <input type="text" nz-input placeholder="input search text" />
+                  </nz-input-group>  
+                  <ng-template #suffixIconButton>
+                          <button nz-button nzType="primary" nzSearch><i nz-icon type="search"></i></button>
+                  </ng-template>
+          </div>
+      </nz-col>
+  </nz-row>
+  <nz-divider></nz-divider>
+  <div style="margin-top:20px">
+          <nz-table>
+                  <thead > 
+                      <tr>
+                          <th style="text-align:center"><strong>课程名</strong></th>
+                          <th style="text-align:center"><strong>账号</strong></th>
+                          <th style="text-align:center"><strong>课程地点</strong></th>
+                          <th style="text-align:center"><strong>课程学时</strong></th>
+                          <th style="text-align:center"><strong>课程周序</strong></th>
+                          <th style="text-align:center"><strong>课时节次</strong></th>
+                          <th style="text-align:center"><strong>班级布局</strong></th>
+                          <th style="text-align:center"><strong>操作</strong></th>
+                      </tr>
+                  </thead>
+              </nz-table>
+  </div>
+  <div style="margin-top:20px;text-align: center" >
+      <nz-pagination [nzPageIndex]="1" [nzTotal]="100"></nz-pagination>
+  </div>
+ 
+        
+</div>

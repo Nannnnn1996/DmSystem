@@ -1,0 +1,43 @@
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="5" nzRequired nzFor="note">字段名</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input id="name" type="text" nz-input formControlName="note" />
+      <nz-form-explain *ngIf="validateForm.get('note')?.dirty && validateForm.get('note')?.errors"
+      >输入字段名</nz-form-explain
+      >
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="5" nzFor="gender" nzRequired>详细描述</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input id="value" type="text" nz-input formControlName="note" />
+      <nz-form-explain *ngIf="validateForm.get('note')?.dirty && validateForm.get('note')?.errors"
+      >输入详细描述</nz-form-explain
+      >
+
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzSpan]="12" [nzOffset]="5">
+      <button nz-button nzType="primary">添加</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>
+<div class="search-result-list">
+  Result List
+</div>
+<div>
+
+<form>
+<nz-form-item>
+  <nz-form-control [nzSpan]="12" [nzOffset]="5">
+    <button nz-button nzType="primary">增加</button>
+  </nz-form-control>
+
+    <nz-form-control [nzSpan]="12" [nzOffset]="5">
+      <button nz-button nzType="default">取消</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>
+</div>
