@@ -1,0 +1,28 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>修改密码</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding class="cl">
+  <div class="show2">
+    <ion-grid>
+      <ion-list>
+        <ion-item>
+          <ion-label fixed>新密码</ion-label>
+          <ion-input [(ngModel)]="newpassword" ></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label fixed>确认密码</ion-label>
+          <ion-input [(ngModel)]="check_password" ></ion-input>
+        </ion-item>
+      </ion-list>
+      <button class="bu" ion-button (click)="post()">提交</button>
+    </ion-grid>
+  </div>
+</ion-content>

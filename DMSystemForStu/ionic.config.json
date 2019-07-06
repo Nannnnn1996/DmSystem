@@ -1,0 +1,11 @@
+{
+  "name": "qiandao",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies": [{
+    "path": "/api",
+    "proxyUrl": "http://47.100.177.167:3000/"
+  }]
+}

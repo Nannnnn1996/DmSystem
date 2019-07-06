@@ -1,0 +1,25 @@
+
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>增加课程</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content no-padding class="bb">
+  <ion-card *ngFor="let item of all_data" class="card" >
+    <div (click)="addcourse(item)">
+    <!--<img src="assets/img/background/background-3.jpg">-->
+    <!--<img src={{backimg}}>-->
+    <div class="card-title">课程：{{item.coursename}}</div>
+    <div class="card-title">老师：{{item.teachername}}</div>
+    <div class="card-title">课程：{{item.CourseWeek}}</div>
+    <div class="card-title">老师：{{item.CourseDay}}</div>
+    <div class="card-title">课程：{{item.CourseTime}}</div>
+    <div class="card-title">老师：{{item.CoursePlace}}</div>
+    </div>
+  </ion-card>
+
+</ion-content>

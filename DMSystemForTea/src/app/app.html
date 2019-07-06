@@ -1,0 +1,30 @@
+<ion-menu [content]="content">
+
+  <ion-header>
+    <ion-toolbar color="#CD96CD" style="background-image: url('../assets/imgs/background/5.jpg')">
+      <ion-item color="primary" no-lines="">
+        <ion-avatar item-start="">
+          <img src="/assets/imgs/background/6.jpg">
+        </ion-avatar>
+        <h2>{{currentUser.name}}</h2>
+        <p>{{currentUser.id}}</p>
+        <p>福州大学</p>
+      </ion-item>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list no-lines style="">
+      <button menuClose="left" ion-item detail-none *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+      <button menuClose="left" ion-item detail-none (click)="login_out()">
+        登出
+      </button>
+    </ion-list>
+    
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

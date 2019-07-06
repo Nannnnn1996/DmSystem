@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>考勤信息</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content no-padding class="bb">
+  <ion-card *ngFor="let item of all_data" class="card">
+    <!--<img src="assets/img/background/background-3.jpg">-->
+    <!--<img src={{backimg}}>-->
+    <div class="card-title">课程：{{item.coursename}}</div>
+    <div class="card-title">签到：{{item.ok}}次</div>
+    <div class="card-subtitle">迟到：{{item.later}}次</div>
+    <div class="card-subtitle-1">旷课：{{item.no}}次</div>
+  </ion-card>
+
+</ion-content>

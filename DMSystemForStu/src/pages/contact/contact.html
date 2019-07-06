@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      我的
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding style="background-color: gainsboro">
+  <ion-list>
+  <ion-item style="margin-top: 20px;"  no-lines="">
+    <!--<h1 style="font-size: 16px;">个人信息</h1>-->
+    <ion-avatar item-start="">
+      <img style="width: 80px;height: 80px;" src="assets/imgs/u1.png">
+    </ion-avatar>
+
+    <h2 style="font-size: 16px;font-family: '楷体'">{{name}}</h2>
+    <h2 style="font-size: 16px;font-family: '楷体'">{{id}}</h2>
+
+  </ion-item>
+  </ion-list>
+
+
+
+
+  <ion-list>
+    <button ion-item (click)="add_course()">
+      <ion-icon name="text"></ion-icon>&nbsp;&nbsp;增加课程
+    </button>
+    <button (click)="kaoqin()" ion-item >
+      <ion-icon name="list-box"></ion-icon>&nbsp;&nbsp;课堂考勤
+    </button>
+    <button (click)="common()" ion-item >
+      <ion-icon name="list-box"></ion-icon>&nbsp;&nbsp;修改密码
+    </button>
+  </ion-list>
+
+  <ion-list>
+    <button (click)="out()" ion-item >
+      <ion-icon name="share-alt"></ion-icon>&nbsp;&nbsp;退出
+    </button>
+  </ion-list>
+</ion-content>

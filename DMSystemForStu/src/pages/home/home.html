@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>班课</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list no-lines="" class="courses">
+    <ion-list-header text-center="" style="font-size: 1.5em;">所选课程</ion-list-header>
+
+    <button class="btn1" ion-button text-center color="white" *ngFor="let course of courses" (click)="courseSelected($event, course)">
+      {{ course.cnameAndID.courseName  }}
+    </button>
+
+
+
+  </ion-list>
+
+  <p text-center="">选择课程进行签到</p>
+</ion-content>

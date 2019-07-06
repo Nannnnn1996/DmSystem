@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>课程设置</ion-title>
+    <ion-buttons end>
+    <button ion-button icon-only (click)="judge11();find()"><ion-icon name="book"></ion-icon></button>
+    <button ion-button icon-only (click)="judge22();find2()"><ion-icon name="build"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding class="cl">
+  <div *ngIf="due">
+    <ion-grid>
+      <ion-row class="row1">
+        <ion-col>课程名</ion-col>
+        <ion-col  >节数</ion-col>
+        <ion-col >地点</ion-col>
+        <ion-col >周序</ion-col>
+        <ion-col >学时</ion-col>
+        <ion-col>班级布局</ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col >{{coursename}}</ion-col>
+        <ion-col>{{classSession}}</ion-col>
+        <ion-col>{{classLocation}}</ion-col>
+        <ion-col>{{classDate}}</ion-col>
+        <ion-col>{{classOrder}}</ion-col>
+        <ion-col>{{shape}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngIf="due2" class="show2">
+    <ion-grid>
+      <ion-list>
+        <ion-item>
+          <ion-label fixed>课程名</ion-label>
+          <ion-input [(ngModel)]="coursename" ></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label fixed>节数</ion-label>
+          <ion-input [(ngModel)]="classSession" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>地点</ion-label>
+          <ion-input [(ngModel)]="classLocation" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>周序</ion-label>
+          <ion-input  [(ngModel)]="classDate" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>学时</ion-label>
+          <ion-input [(ngModel)]="classOrder" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>班级布局</ion-label>
+          <ion-input [(ngModel)]="shape" ></ion-input>
+        </ion-item>
+
+      </ion-list>
+      <button class="bu" ion-button (click)="post()">提交</button>
+    </ion-grid>
+  </div>
+
+</ion-content>

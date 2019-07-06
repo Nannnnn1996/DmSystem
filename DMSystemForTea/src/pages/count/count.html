@@ -1,0 +1,38 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>考勤统计</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="judge11();find()"><ion-icon name="ios-search"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding class="cl">
+  <div *ngIf="due">
+    <ion-grid>
+      <ion-row class="row1">
+        <ion-col>学号</ion-col>
+        <ion-col>姓名</ion-col>
+        <ion-col>签到数</ion-col>
+        <ion-col>旷课数</ion-col>
+        <ion-col>迟到数</ion-col>
+      </ion-row>
+
+      <div class="show3">
+        <ion-row *ngFor="let r of result">
+          <ion-col>{{r.StudentNumber}}</ion-col>
+          <ion-col >{{r.Studentname}}</ion-col>
+          <ion-col >{{r.ok}}</ion-col>
+          <ion-col >{{r.later}}</ion-col>
+          <ion-col >{{r.no}}</ion-col>
+        </ion-row>
+      </div>
+    </ion-grid>
+  </div>
+
+</ion-content>
+

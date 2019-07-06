@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button  menuToggle icon-only><ion-icon name="menu"></ion-icon></button>
+    <ion-title>首页-我的课程</ion-title>
+    <ion-buttons end>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding class="cl">
+
+  <div style="margin-top: 30px;text-align: center;font-size: 18px;"><span style="font-weight: bold;">{{teachername}}{{pname}}</span>，您好！欢迎使用教师端！</div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let course of courseList">
+        <button ion-button class="bu" (click)="courseSelected(course)">{{course}}</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div style="text-align: center;margin-top: 20px;">请选择课程进行功能操作</div>
+
+</ion-content>

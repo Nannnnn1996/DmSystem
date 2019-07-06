@@ -1,0 +1,50 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>登录</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding class="aaa">
+  <img style="width: 100px;height: 100px;margin-left: 35%;margin-top: 40px;" src="assets/imgs/u1.png" alt="">
+  <div padding-left padding-right>
+    <form (ngSubmit)="login()" style="margin-top: 50px;">
+      <ion-row>
+        <ion-col>
+          <ion-list inset class="no-border">
+            <ion-item>
+              <ion-label>学号：</ion-label>
+              <ion-input type="text" [(ngModel)]="user.name"  name="name"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>密码：</ion-label>
+              <ion-input type="password" [(ngModel)]="user.pwd" name="pwd"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+
+    <ion-grid>
+      <ion-row>
+
+
+        <ion-col>
+          <button type="submit" ion-button block color="primary">登录</button>
+        </ion-col>
+
+      </ion-row>
+      <ion-row>
+        <ion-col>忘记密码？</ion-col>
+      </ion-row>
+      <ion-row text-center>
+        <ion-col ></ion-col>
+      </ion-row>
+    </ion-grid>
+    </form>
+  </div>
+</ion-content>
+

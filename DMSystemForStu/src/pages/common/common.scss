@@ -1,0 +1,53 @@
+page-common {
+  .bb{
+    margin-top: 15px;
+  }
+
+  .card{
+    //margin-left: 10%;
+    margin-right: 10%;
+    //background-color: blue;
+    height: 80px;
+    font-weight: bold;
+    font-family: '仿宋';
+    font-size: medium;
+    border: solid 3px gainsboro;
+  }
+
+  //ion-card {
+  //  position: relative;
+  //  text-align: center;
+  //}
+  .aa {
+    color: grey;
+  }
+
+  .card-title {
+    //position: absolute;
+    margin-top: 6px;
+    margin-left: 10px;
+    //top: 36%;
+    font-size: 1.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #000000;
+  }
+
+
+  .card-subtitle {
+    font-size: 1.0em;
+    margin-left: 10px;
+    //position: absolute;
+    top: 55%;
+    width: 100%;
+    color: #000000;
+  }
+  .card-subtitle-1 {
+    font-size: 1.0em;
+    margin-left: 10px;
+    //position: absolute;
+    top: 70%;
+    width: 100%;
+    color: #000000;
+  }
+}
